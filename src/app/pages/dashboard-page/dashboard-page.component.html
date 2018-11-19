@@ -1,0 +1,14 @@
+<ng-container *ngIf="currentWeekData && users">
+  <mat-toolbar color="primary">
+    <span>Bet4Friends</span>
+    <div class="select-matches">
+      Te toca... <button mat-raised-button (click)="onClickSelectMatches()">Elegir partidos!</button>
+    </div>
+  </mat-toolbar>
+
+  <p>
+    Current Week {{ currentWeekData.week }}
+  </p>
+
+  <app-predictions-widget [matches]="currentWeekData.matches" [players]="users"></app-predictions-widget>
+</ng-container>

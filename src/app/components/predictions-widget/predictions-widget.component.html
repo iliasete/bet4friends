@@ -1,0 +1,16 @@
+<mat-table [dataSource]="tableSourceData">
+  <ng-container matColumnDef="match">
+    <mat-header-cell *matHeaderCellDef> Partidos </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.match }} </mat-cell>
+  </ng-container>
+
+  <ng-container *ngFor="let player of players" matColumnDef="{{ player.username }}">
+    <mat-header-cell *matHeaderCellDef> {{ player.name }} </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button *ngIf="currentUser.email === player.email" mat-stroked-button color="primary"> Seleccionar </button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

@@ -1,0 +1,17 @@
+button {
+  width: 100px;
+}
+
+mat-header-cell {
+  display:flex;
+  justify-content: center;
+}
+
+mat-dialog-actions {
+  justify-content: space-between;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+}

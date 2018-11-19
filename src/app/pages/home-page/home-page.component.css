@@ -1,0 +1,18 @@
+.login-container {
+  width: 100%;
+}
+
+.icon-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+  .icon-input i {
+    margin-right: 15px;
+  }
+
+.login-actions button.mat-raised-button {
+  width: 100%;
+  margin: 5px 0;
+}
